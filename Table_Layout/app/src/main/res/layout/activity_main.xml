@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:shrinkColumns="0"> <!--Shrinking the first column so that all the columns
+                                can fit into the screen.-->
+
+    <TableRow>
+        <TextView
+            android:text="Some text for the application"
+            android:textAllCaps="true"
+            android:textColor="@color/black">
+
+        </TextView>
+
+    </TableRow>
+
+    <TableRow>
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Button1"
+        android:textSize="10dp">
+    </Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Button1"
+            android:textSize="10dp">
+        </Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Button1"
+            android:textSize="10dp">
+        </Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Button1"
+            android:textSize="10dp">
+        </Button>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Button1"
+            android:textSize="10dp">
+        </Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Button1"
+            android:textSize="10dp">
+        </Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Button1"
+            android:textSize="10dp">
+        </Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Button1"
+            android:textSize="10dp">
+        </Button>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Button1"
+            android:textSize="10dp">
+        </Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Button1"
+            android:textSize="10dp">
+        </Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Button1"
+            android:textSize="10dp">
+        </Button>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Button1"
+            android:textSize="10dp">
+        </Button>
+    </TableRow>
+
+    <TableLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"> <!-- Expanding the columns so that the two buttons can span
+                                    the entire screen.-->
+        <TableRow android:layout_margin="10dp">
+            <Button
+                android:text="Button2"
+                android:backgroundTint="@color/teal_700"
+                android:layout_margin="5dp"
+                android:layout_span="2"> <!--Button taking the space of 2 columns-->
+            </Button>
+            <Button
+                android:text="Button2"
+                android:backgroundTint="@color/teal_700"
+                android:layout_margin="5dp">
+            </Button>
+
+        </TableRow>
+
+        <TableRow android:layout_margin="10dp">
+            <Button
+                android:text="Button2"
+                android:backgroundTint="@color/teal_700"
+                android:layout_margin="5dp"
+                >
+            </Button>
+            <Button
+                android:text="Button2"
+                android:backgroundTint="@color/teal_700"
+                android:layout_margin="5dp"
+                >
+            </Button>
+
+        </TableRow>
+
+        <TableRow android:layout_margin="10dp">
+            <Button
+                android:text="Button2"
+                android:backgroundTint="@color/teal_700"
+                android:layout_margin="5dp"
+                >
+            </Button>
+            <Button
+                android:text="Button2"
+                android:backgroundTint="@color/teal_700"
+                android:layout_margin="5dp"
+                android:layout_column="2"> <!--Making button to go to column 2-->
+            </Button>
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</TableLayout>
