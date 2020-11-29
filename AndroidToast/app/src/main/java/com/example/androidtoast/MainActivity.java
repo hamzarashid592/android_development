@@ -9,13 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn1,btn2,btn3,toggleSubmit;
+    Button btn1,btn2,btn3,toggleSubmit, switchSubmit;
     ToggleButton toggle1, toggle2;
+    Switch sw1,sw2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
         toggleSubmit=(Button)findViewById(R.id.toggleResult);
         toggle1=(ToggleButton)findViewById(R.id.toggleButton1);
         toggle2=(ToggleButton)findViewById(R.id.toggleButton2);
+        //Making switches:
+        sw1=(Switch)findViewById(R.id.washing_machine_switch);
+        sw2=(Switch)findViewById(R.id.fridge_switch);
+        switchSubmit=(Button)findViewById(R.id.switchResult);
 
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -95,6 +101,25 @@ public class MainActivity extends AppCompatActivity {
                 toast.setText(str_builder.toString());
                 toast.setDuration(Toast.LENGTH_SHORT);
                 toast.show();
+            }
+        });
+        switchSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StringBuilder str= new StringBuilder();
+                if (sw1.isChecked())
+                    str.append("Washing Wachine says: ").append(sw1.getTextOn());
+                else
+                    str.append("Washing Wachine says: ").append(sw1.getTextOff());
+                if (sw2.isChecked())
+                    str.append("\nFridge says: ").append(sw2.getTextOn());
+                else
+                    str.append("\nFridge says: ").append(sw2.getTextOff());
+
+                Toast t= new Toast(getApplicationContext());
+                t.setText(str.toString());
+                t.setDuration(Toast.LENGTH_SHORT);
+                t.show();
             }
         });
 

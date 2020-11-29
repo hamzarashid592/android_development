@@ -49,17 +49,51 @@
         app:layout_constraintTop_toBottomOf="@id/btn1"
         app:layout_constraintVertical_bias="0.0"></Button>
 
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="292dp"
+        android:backgroundTint="@color/purple_200"
+        android:textColor="@color/white"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButton2"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ToggleButton>
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="268dp"
+        android:layout_marginLeft="268dp"
+        android:layout_marginTop="296dp"
+        android:backgroundTint="@color/purple_200"
+        android:textColor="@color/white"
+        android:textOff="off"
+        android:textOn="on"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/toggleResult"
+        app:layout_constraintVertical_bias="0.0"></ToggleButton>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="8dp"
         android:text="Radio"
         android:textAllCaps="true"
         android:textColor="@color/purple_200"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/toggleButton1"
         app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"></TextView>
 
     <TextView
@@ -68,56 +102,71 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="96dp"
         android:layout_marginRight="96dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="12dp"
         android:text="tv"
         android:textAllCaps="true"
         android:textColor="@color/purple_200"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/toggleButton2"
-        app:layout_constraintEnd_toEndOf="parent"></TextView>
-
-    <ToggleButton
-        android:id="@+id/toggleButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="268dp"
-        android:layout_marginLeft="268dp"
-        android:layout_marginTop="324dp"
-        android:backgroundTint="@color/purple_200"
-        android:textColor="@color/white"
-        android:textOff="off"
-        android:textOn="on"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ToggleButton>
-
-    <ToggleButton
-        android:id="@+id/toggleButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="320dp"
-        android:backgroundTint="@color/purple_200"
-        android:textColor="@color/white"
-        android:textOff="off"
-        android:textOn="on"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/toggleButton2"
-        app:layout_constraintHorizontal_bias="0.062"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ToggleButton>
+        app:layout_constraintEnd_toEndOf="parent"
+        ></TextView>
 
     <Button
         android:id="@+id/toggleResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/teal_700"
         android:text="Toggle result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toggleButton1"></Button>
+
+    <Switch
+        android:id="@+id/washing_machine_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:text="Washing Machine"
+        android:textColor="@color/black"
+        android:textOff="Machine_OFF"
+        android:textOn="Machine_ON"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleResult"></Switch>
+
+    <Switch
+        android:id="@+id/fridge_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Fridge"
+        android:textColor="@color/black"
+        android:textOff="Fridge_OFF"
+        android:textOn="Fridge_ON"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/washing_machine_switch"
+        app:layout_constraintVertical_bias="0.127"></Switch>
+
+    <Button
+        android:id="@+id/switchResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Switch Result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fridge_switch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
