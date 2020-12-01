@@ -9,17 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Checkbox_Project">
-        <activity android:name=".time_pciker_dialog">
+        <activity android:name=".Working_with_Progress_Bar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".time_picker">
+        <activity android:name=".Testing_Threads">
 
         </activity>
-        <activity android:name=".Date_Picker_Dialog"></activity>
+        <activity android:name=".time_pciker_dialog"></activity>
+        <activity android:name=".time_picker" />
+        <activity android:name=".Date_Picker_Dialog" />
         <activity android:name=".Date_Picker" />
         <activity android:name=".MainActivity" />
     </application>
