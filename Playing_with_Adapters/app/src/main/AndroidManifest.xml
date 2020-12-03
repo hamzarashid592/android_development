@@ -9,18 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Playing_with_Adapters">
-        <activity android:name=".Testing_Simple_Adapter_B"></activity>
-        <activity android:name=".Testing_Simple_Adapter_A" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Activity_b"></activity>
+        <activity android:name=".Activity_a" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Testing_Simple_Adapter_B" />
+        <activity android:name=".Testing_Simple_Adapter_A">
 
         </activity>
-        <activity android:name=".Image_Grid" ></activity>
-        <activity android:name=".MainActivity"></activity>
-
+        <activity android:name=".Image_Grid" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
