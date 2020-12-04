@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Playing_with_Adapters_2</string>
+
+    <string-array name="titles">
+        <item>Pakistan</item>
+        <item>Afghanistan</item>
+        <item>Algeria</item>
+        <item>Bangladesh</item>
+        <item>Australia</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>Imran Khan is the PM</item>
+        <item>Ashraf Ghani is the PM</item>
+        <item>Kazafi is the PM</item>
+        <item>Haseena is the PM</item>
+        <item>Jesinda is the PM</item>
+    </string-array>
 </resources>
