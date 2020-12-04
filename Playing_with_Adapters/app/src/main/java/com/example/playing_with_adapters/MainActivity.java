@@ -4,10 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.GridView;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-    GridView simpleGridView;
+    ListView simpleListView;
     int flag_pics[]={R.drawable.a,R.drawable.b,R.drawable.c,R.drawable.d,R.drawable.e};
 
     @Override
@@ -15,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        simpleGridView=(GridView)findViewById(R.id.simpleGridView);
+        simpleListView=(ListView)findViewById(R.id.simpleListView);
 
         BaseAdapterTest myAdapter= new BaseAdapterTest(getApplicationContext(),flag_pics);
 
-        simpleGridView.setAdapter(myAdapter);
+        simpleListView.setAdapter(myAdapter);
     }
 }
