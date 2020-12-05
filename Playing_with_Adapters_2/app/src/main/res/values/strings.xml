@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Playing_with_Adapters_2</string>
+    <string name="app_name">Playing with Adapters 2</string>
 
     <string-array name="titles">
         <item>Pakistan</item>
@@ -36,4 +36,13 @@
         <item>Haseena is the PM</item>
         <item>Jesinda is the PM</item>
     </string-array>
+    <string name="title_activity_array_adapter_5">array_adapter_5</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

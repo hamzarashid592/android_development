@@ -1,40 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto">-->
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:scaleType="fitXY"
-        android:padding="10dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"></ImageView>
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"></ImageView>-->
 
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_marginStart="110dp"
-        android:textColor="@color/black"
-        android:textSize="35dp"
-        android:layout_alignLeft="@+id/imageView"
-        android:layout_marginLeft="110dp"></TextView>
+<!--    <TextView-->
+<!--        android:id="@+id/titleTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignTop="@id/imageView"-->
+<!--        android:layout_alignStart="@+id/imageView"-->
+<!--        android:layout_marginStart="110dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="35dp"-->
+<!--        android:layout_alignLeft="@+id/imageView"-->
+<!--        android:layout_marginLeft="110dp"></TextView>-->
 
-    <TextView
-        android:id="@+id/descTestView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="25dp"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_alignBottom="@id/imageView"
-        android:layout_marginStart="110dp"
-        android:layout_alignLeft="@+id/imageView"
-        android:layout_marginLeft="110dp"></TextView>
+<!--    <TextView-->
+<!--        android:id="@+id/descTestView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="25dp"-->
+<!--        android:layout_alignStart="@+id/imageView"-->
+<!--        android:layout_alignBottom="@id/imageView"-->
+<!--        android:layout_marginStart="110dp"-->
+<!--        android:layout_alignLeft="@+id/imageView"-->
+<!--        android:layout_marginLeft="110dp"></TextView>-->
 
-</RelativeLayout>
+<!--</RelativeLayout>-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="100dp"
+    android:layout_height="80dp"
+    android:scaleType="fitXY"
+    android:padding="10dp"
+    android:src="@drawable/a"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintVertical_bias="0.5"></ImageView>
+
+<TextView
+    android:id="@+id/titleTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/black"
+    android:textSize="30dp"
+    android:text="hasduiadidu"
+    app:layout_constraintStart_toEndOf="@id/imageView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@id/imageView"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintVertical_bias="0.0"></TextView>
+
+<TextView
+    android:id="@+id/descTestView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/black"
+    android:textSize="24dp"
+    android:text="sadasdasdasdasdasda"
+    app:layout_constraintStart_toStartOf="@id/titleTextView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/titleTextView"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintVertical_bias="0.0"></TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

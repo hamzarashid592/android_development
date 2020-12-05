@@ -12,10 +12,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -39,6 +41,12 @@ public class array_adapter_3 extends AppCompatActivity {
 
         CustomArrayAdapter adp= new CustomArrayAdapter(getApplicationContext(),titles,description,images);
         listView1.setAdapter(adp);
+        listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(),"You have cliked on "+titles[position],Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
     }
