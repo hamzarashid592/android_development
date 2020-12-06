@@ -1,57 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="wrap_content"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    tools:context=".Fragment2"-->
-<!--    android:background="#d4e4d3"-->
-<!--    android:padding="10dp">-->
-
-<!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/textView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:textSize="15dp"-->
-<!--        android:text="fragment 1"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textAllCaps="true"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintVertical_bias="0.0"/>-->
-
-<!--    <Button-->
-<!--        android:id="@+id/fragment2Button"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="PRess me"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="15dp"-->
-<!--        android:backgroundTint="@color/teal_700"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/textView"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintVertical_bias="0.0"-->
-<!--        ></Button>-->
-
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment2"
-    android:orientation="vertical"
     android:background="#d4e4d3"
-    android:padding="10dp"
-    android:gravity="center">
+    android:padding="10dp">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -61,7 +16,13 @@
         android:textSize="15dp"
         android:text="fragment 1"
         android:textColor="@color/black"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.0"/>
 
     <Button
         android:id="@+id/fragment2Button"
@@ -70,6 +31,14 @@
         android:text="PRess me"
         android:textColor="@color/white"
         android:textSize="15dp"
-        android:backgroundTint="@color/teal_700"></Button>
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.0"
+        ></Button>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

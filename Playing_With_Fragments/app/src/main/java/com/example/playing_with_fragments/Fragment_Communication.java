@@ -19,11 +19,15 @@ public class Fragment_Communication extends AppCompatActivity implements Fragmen
         FragmentManager manager= getSupportFragmentManager();
         androidx.fragment.app.FragmentTransaction transaction= manager.beginTransaction();
 
-        transaction.add(R.id.fragment2_layout,frag2,"fragment_2");
-        transaction.add(R.id.fragment3_layout,frag3,"fragment_3");
+        transaction.replace(R.id.fragment2_layout,frag2,"fragment_2");
+        transaction.replace(R.id.fragment3_layout,frag3,"fragment_3");
         transaction.commit();
 
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
 
     }
 
