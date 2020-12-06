@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Playing_With_Fragments">
-        <activity android:name=".Fragment_Communication">
+
+        <activity android:name=".Fragment_Communication"
+            >
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

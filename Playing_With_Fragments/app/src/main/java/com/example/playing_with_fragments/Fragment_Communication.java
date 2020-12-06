@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 public class Fragment_Communication extends AppCompatActivity implements FragmentCommunicator {
@@ -21,6 +22,8 @@ public class Fragment_Communication extends AppCompatActivity implements Fragmen
         transaction.add(R.id.fragment2_layout,frag2,"fragment_2");
         transaction.add(R.id.fragment3_layout,frag3,"fragment_3");
         transaction.commit();
+
+
 
     }
 

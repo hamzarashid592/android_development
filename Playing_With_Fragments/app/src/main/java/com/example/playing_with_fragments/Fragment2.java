@@ -2,6 +2,7 @@ package com.example.playing_with_fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -21,6 +22,9 @@ public class Fragment2 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (counter!=0){
+            counter=savedInstanceState.getInt("counter");
+        }
 
     }
 
@@ -48,5 +52,11 @@ public class Fragment2 extends Fragment {
             }
         });
 
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("counter",counter);
     }
 }
