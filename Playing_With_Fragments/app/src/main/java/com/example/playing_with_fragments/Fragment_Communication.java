@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.util.Log;
 
 public class Fragment_Communication extends AppCompatActivity implements FragmentCommunicator {
 
@@ -14,14 +15,18 @@ public class Fragment_Communication extends AppCompatActivity implements Fragmen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment__communication);
 
-        Fragment2 frag2= new Fragment2();
-        Fragment3 frag3= new Fragment3();
-        FragmentManager manager= getSupportFragmentManager();
-        androidx.fragment.app.FragmentTransaction transaction= manager.beginTransaction();
+        if (savedInstanceState==null){  //This is to prevent the fragment onCreate to be called multiple times.
+            Fragment2 frag2= new Fragment2();
+            Fragment3 frag3= new Fragment3();
+            FragmentManager manager= getSupportFragmentManager();
+            androidx.fragment.app.FragmentTransaction transaction= manager.beginTransaction();
 
-        transaction.replace(R.id.fragment2_layout,frag2,"fragment_2");
-        transaction.replace(R.id.fragment3_layout,frag3,"fragment_3");
-        transaction.commit();
+            transaction.replace(R.id.fragment2_layout,frag2,"fragment_2");
+            transaction.replace(R.id.fragment3_layout,frag3,"fragment_3");
+            transaction.commit();
+            Log.d("HAMZA","Created the activity for the first time.");
+        }
+
 
     }
 

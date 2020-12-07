@@ -2,6 +2,7 @@ package com.example.playing_with_fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -16,10 +17,19 @@ import org.w3c.dom.Text;
 public class Fragment3 extends Fragment {
 
     TextView textView;
+    String textViewText;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        if fragment is created for the first time..
+        if(savedInstanceState==null){
+            textViewText="The button was clicked 0 times";
+        }
+        else{
+            textViewText=savedInstanceState.getString("text",null);
+        }
+
 
     }
 
@@ -35,10 +45,17 @@ public class Fragment3 extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         textView=getActivity().findViewById(R.id.fragment3TextView);
-        textView.setText("The button was clicked 0 times");
+        textView.setText(textViewText);
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("text",textViewText);
     }
 
     public void modifyText(String text){
-        textView.setText(text);
+        textViewText=text;
+        textView.setText(textViewText);
     }
 }
