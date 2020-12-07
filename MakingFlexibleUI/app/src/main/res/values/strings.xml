@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Flexible UI</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="titles">
+        <item>Pakistan</item>
+        <item>India</item>
+        <item>Bangladesh</item>
+        <item>Sri Lanka</item>
+        <item>The Maldives</item>
+        <item>Nepal</item>
+        <item>Pakistan</item>
+        <item>India</item>
+        <item>Bangladesh</item>
+        <item>Sri Lanka</item>
+        <item>The Maldives</item>
+        <item>Nepal</item>
+    </string-array>
+
+    <string-array name="contents">
+        <item>Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+        <item>Modi is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+        <item>Haseena is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+        <item>Some guy is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+        <item>White dude is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+        <item>Nepali Boi is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+        <item>Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+        <item>Modi is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+        <item>Haseena is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+        <item>Some guy is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+        <item>White dude is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+        <item>Nepali Boi is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.Imran Khan is the PM. This country belongs to the SAARC.</item>
+    </string-array>
+</resources>
