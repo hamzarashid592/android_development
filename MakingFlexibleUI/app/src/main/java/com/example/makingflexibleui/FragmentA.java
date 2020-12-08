@@ -53,8 +53,12 @@ public class FragmentA extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.d("HAMZA","Item "+position+" selected");
-                    comm.communicator(position);
+
+//                This is block is for simple flexible UI
+//                comm.communicator(position);
+
+//                This part is for a little complex flexible UI.
+                comm.communicator(position);
             }
         });
         Log.d("HAMZA","Fragment A created.");

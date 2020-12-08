@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".FragmentA"
     android:orientation="vertical"
-    android:gravity="center"
     android:background="#c7eae3">
 
     <ListView

@@ -40,6 +40,5 @@ public class MainActivity extends AppCompatActivity implements FragmentA.Fragmen
 
 
         frag.changeText(contents[data]);
-        Log.d("HAMZA","Invoked the communicator..!");
     }
 }

@@ -34,6 +34,7 @@ public class FragmentB extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         textView=getActivity().findViewById(R.id.textView);
+        Log.d("HAMZA","Fragment B created..");
     }
 
     void changeText(String data){
