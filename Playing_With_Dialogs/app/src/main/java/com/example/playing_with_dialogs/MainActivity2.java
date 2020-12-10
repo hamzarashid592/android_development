@@ -1,3 +1,4 @@
+//This activity is for scrollable tabs.
 package com.example.playing_with_dialogs;
 
 import androidx.annotation.NonNull;
