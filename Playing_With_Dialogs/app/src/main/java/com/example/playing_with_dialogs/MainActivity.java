@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements communicator{
 
     Button button1;
+    Button button2;
     TextView text;
 
     @Override
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements communicator{
         setContentView(R.layout.activity_main);
 
         button1=findViewById(R.id.button1);
+        button2=findViewById(R.id.button2);
         text=findViewById(R.id.text);
 
         button1.setOnClickListener(new View.OnClickListener() {
@@ -27,6 +29,15 @@ public class MainActivity extends AppCompatActivity implements communicator{
                 Dialog1 myDialog= new Dialog1();
                 FragmentManager manager= getSupportFragmentManager();
                 myDialog.show(manager,"dialog_1");
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog2 myDialog= new Dialog2();
+                FragmentManager manager= getSupportFragmentManager();
+                myDialog.show(manager,"dialog_2");
             }
         });
 

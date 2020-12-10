@@ -37,7 +37,7 @@ public class Dialog1 extends DialogFragment {
         yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"YES button cliked",Toast.LENGTH_SHORT);
+                Toast.makeText(getActivity(),"YES button cliked",Toast.LENGTH_SHORT).show();
                 comm.communicate("YES dabaya tha..!!");
                 dismiss();
             }
@@ -46,7 +46,7 @@ public class Dialog1 extends DialogFragment {
         no.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"NO button cliked",Toast.LENGTH_SHORT);
+                Toast.makeText(getActivity(),"NO button cliked",Toast.LENGTH_SHORT).show();
                 comm.communicate("NO dabaya tha..!!");
                 dismiss();
             }
