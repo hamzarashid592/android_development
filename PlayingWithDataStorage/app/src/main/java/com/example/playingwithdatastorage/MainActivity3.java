@@ -37,7 +37,8 @@ public class MainActivity3 extends AppCompatActivity {
         updateSelection=findViewById(R.id.updateSelection);
 
         dbHelper helper= new dbHelper(this);
-        SQLiteDatabase db=helper.getWritableDatabase();
+        SQLiteDatabase db=helper.getWritableDatabase(); //Database is created here..! onCreate called on this.
+        //We are converting the schema defined in the dbHelper class to a physical database.
 
 
         submit.setOnClickListener(new View.OnClickListener() {
