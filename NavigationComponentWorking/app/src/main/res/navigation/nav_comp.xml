@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_comp"
+    app:startDestination="@id/fragmentA">
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.example.navigationcomponentworking.FragmentA"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a">
+        <action
+            android:id="@+id/A_to_B"
+            app:destination="@id/fragmentB"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.example.navigationcomponentworking.FragmentB"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b">
+        <action
+            android:id="@+id/B_to_A"
+            app:destination="@id/fragmentA"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <argument
+            android:name="fullName"
+            app:argType="string"
+            android:defaultValue="abc"></argument>
+        <argument
+            android:name="age"
+            app:argType="integer"
+            android:defaultValue="2" />
+    </fragment>
+
+</navigation>
