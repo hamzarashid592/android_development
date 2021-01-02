@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/fragmentA"
         android:name="com.example.navigationcomponentworking.FragmentA"
-        android:label="fragment_a"
+        android:label="Fragment A"
         tools:layout="@layout/fragment_a">
         <action
             android:id="@+id/A_to_B"
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/fragmentB"
         android:name="com.example.navigationcomponentworking.FragmentB"
-        android:label="fragment_b"
+        android:label="Fragment B"
         tools:layout="@layout/fragment_b">
         <action
             android:id="@+id/B_to_A"

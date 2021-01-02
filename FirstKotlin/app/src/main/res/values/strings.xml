@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FirstKotlin</string>
+    <string-array name="hobbies">
+        <item>dancing</item>
+        <item>swimming</item>
+        <item>writing</item>
+        <item>programming</item>
+
+    </string-array>
+</resources>

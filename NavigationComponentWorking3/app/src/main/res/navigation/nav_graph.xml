@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentA">
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.example.navigationcomponentworking3.FragmentA"
+        android:label="Login"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentB"
+            app:destination="@id/fragmentB"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.example.navigationcomponentworking3.FragmentB"
+        android:label="Enter Credentials"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_fragmentB_to_fragmentC"
+            app:destination="@id/fragmentC"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentC"
+        android:name="com.example.navigationcomponentworking3.FragmentC"
+        android:label="Welcome {username}"
+        tools:layout="@layout/fragment_c" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentA"
+            app:destination="@id/fragmentA"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragmentA"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.navigationcomponentworking3.settingsFragment"
+        android:label="Settings" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.navigationcomponentworking3.aboutUsFragment"
+        android:label="About Us"
+        tools:layout="@layout/about_us_fragment" />
+    <action
+        android:id="@+id/action_global_aboutUsFragment"
+        app:destination="@id/aboutUsFragment"
+        app:enterAnim="@anim/fragment_open_enter"
+        app:exitAnim="@anim/fragment_open_exit"
+        app:popEnterAnim="@anim/fragment_open_enter"
+        app:popExitAnim="@anim/fragment_open_exit" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.navigationcomponentworking3.searchFragment"
+        android:label="Search"
+        tools:layout="@layout/search_fragment" />
+</navigation>
