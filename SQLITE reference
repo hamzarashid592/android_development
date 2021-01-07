@@ -1,0 +1,20 @@
+create table transactions (trasactionID Integer primary key autoincrement not null, 
+transactionDate Text, 
+transactionTime Text, 
+transactionAmount double, 
+transactionType Text check (transactionType="Income" or transactionType="Expense"),
+accountID integer not null,
+foreign key (accountID) references accounts(accountID) on delete cascade)
+
+Insert into transactions (transactionDate, transactionTime, transactionAmount, transactionType,accountID) values ("01-Jan-2020","14:00",50.0,"Income",5)
+
+insert into accounts (accountName, accountBalance, accountNumRecords, accountColor) values ("Savings, 300.0",3,"Blue");
+
+
+create trigger alter_balance after insert on transactions
+begin
+
+update accounts set accountBalance=case when new.transactionType="Expense" then accountBalance-new.transactionAmount 
+else accountBalance+new.transactionAmount end, accountNumRecords=accountNumRecords+1 where accountID=new.accountID;
+
+end
