@@ -68,6 +68,8 @@ class MainActivity4 : AppCompatActivity() {
 //        Getting a map of account ids and account names.
         accountID2AccountName=dbHelper.getAccountNames()
 
+        Log.d("hamza",getDatabasePath("WalletDB").toString())
+
 
 //        Initializing the grid layout manager for the accounts recycler view and populating it
         var layoutManager1 = GridLayoutManager(this, 3, GridLayoutManager.VERTICAL, false)
