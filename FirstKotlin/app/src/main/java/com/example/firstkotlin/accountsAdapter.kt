@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.lo_account.view.*
+import kotlin.random.Random
 
 class accountsAdapter(
     private val context: Context,
@@ -40,6 +41,7 @@ class accountsAdapter(
 //        Setting the account name and balance of the text views
         holder.itemView.text_view_account_name.text=accounts[position].accountName
         holder.itemView.text_view_account_balance.text="PKR ${accounts[position].accountBalance.toString()}"
+
         holder.pos=position
 
 

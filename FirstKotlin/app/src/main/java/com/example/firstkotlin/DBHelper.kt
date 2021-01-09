@@ -239,5 +239,25 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) : SQLit
         return transactionList
     }
 
+    fun getAccountNames(): HashMap<Int,String>{
+
+        var accountMap= HashMap<Int,String>()
+
+        val db=this.readableDatabase
+        if(db!=null){
+            var cursor=db.query(ACCOUNT_TABLE, arrayOf(COL_ACCOUNT_ID, COL_ACCOUNT_NAME),null,null,null,null,null)
+            while (cursor.moveToNext()){
+                var id=cursor.getInt(cursor.getColumnIndex(COL_ACCOUNT_ID))
+                var name=cursor.getString(cursor.getColumnIndex(COL_ACCOUNT_NAME))
+                accountMap.put(id,name)
+            }
+            cursor.close()
+        }
+
+        db.close()
+
+        return accountMap
+    }
+
 
 }

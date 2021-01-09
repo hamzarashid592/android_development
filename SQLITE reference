@@ -3,6 +3,7 @@ transactionDate Text,
 transactionTime Text, 
 transactionAmount double, 
 transactionType Text check (transactionType="Income" or transactionType="Expense"),
+transactionComments Text,
 accountID integer not null,
 foreign key (accountID) references accounts(accountID) on delete cascade)
 

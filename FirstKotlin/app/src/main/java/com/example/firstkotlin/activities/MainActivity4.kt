@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.firstkotlin.*
 import kotlinx.android.synthetic.main.activity_main4.*
@@ -19,6 +20,8 @@ import kotlin.collections.ArrayList
 class MainActivity4 : AppCompatActivity() {
 
     private var accountList = ArrayList<Account>()
+    private var transactionList=ArrayList<Transaction>()
+    private var accountID2AccountName= HashMap<Int,String>()
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,18 +59,25 @@ class MainActivity4 : AppCompatActivity() {
 //            )
 //        )
 
-
-
+//        Getting the account data
         accountList = dbHelper.getAccountRecord()
-        Log.d("hamza",accountList[3].accountNumRecords.toString())
-        Log.d("hamza",accountList[4].accountNumRecords.toString())
-        Log.d("hamza",accountList[5].accountNumRecords.toString())
+
+//        Getting the transaction data.
+        transactionList=dbHelper.getTransactionRecord()
+
+//        Getting a map of account ids and account names.
+        accountID2AccountName=dbHelper.getAccountNames()
 
 
-//        Initializing the grid layout manager and populating the recycler view
-        var layoutManager = GridLayoutManager(this, 3, GridLayoutManager.VERTICAL, false)
-        recycler_view.layoutManager = layoutManager
-        recycler_view.adapter = accountsAdapter(this, accountList)
+//        Initializing the grid layout manager for the accounts recycler view and populating it
+        var layoutManager1 = GridLayoutManager(this, 3, GridLayoutManager.VERTICAL, false)
+        accounts_recycler_view.layoutManager = layoutManager1
+        accounts_recycler_view.adapter = accountsAdapter(this, accountList)
+
+//        Initializing the grid layout manager for the accounts recycler view and populating it
+        var layoutManager2 = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
+        transactions_recycler_view.layoutManager=layoutManager2
+        transactions_recycler_view.adapter=transactionsAdapter(this,transactionList,accountID2AccountName)
 
 
     }
