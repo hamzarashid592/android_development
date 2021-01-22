@@ -17,6 +17,9 @@
             app:exitAnim="@android:anim/fade_out"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentD"
+            app:destination="@id/fragmentD" />
     </fragment>
     <fragment
         android:id="@+id/fragmentB"
@@ -73,4 +76,18 @@
         android:name="com.example.navigationcomponentworking3.searchFragment"
         android:label="Search"
         tools:layout="@layout/search_fragment" />
+    <fragment
+        android:id="@+id/fragmentD"
+        android:name="com.example.navigationcomponentworking3.FragmentD"
+        android:label="fragment_d"
+        tools:layout="@layout/fragment_d" >
+        <action
+            android:id="@+id/action_fragmentD_to_fragmentDC"
+            app:destination="@id/fragmentDC" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDC"
+        android:name="com.example.navigationcomponentworking3.FragmentDC"
+        android:label="fragment_dc"
+        tools:layout="@layout/fragment_dc" />
 </navigation>

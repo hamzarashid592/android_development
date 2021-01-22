@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.navigation.NavDirections
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_a.*
 import kotlinx.android.synthetic.main.fragment_a.view.*
@@ -31,6 +32,11 @@ class FragmentA : Fragment() {
         view.btn_login.setOnClickListener {
             var navDirections : NavDirections= FragmentADirections.actionFragmentAToFragmentB()
             findNavController().navigate(navDirections)
+        }
+
+        view.btn_test1.setOnClickListener {
+            var navDirections=FragmentADirections.actionFragmentAToFragmentD()
+            view.findNavController().navigate(navDirections)
         }
 
         view.fab1.setOnClickListener {

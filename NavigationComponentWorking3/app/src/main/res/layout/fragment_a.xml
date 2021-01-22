@@ -31,6 +31,14 @@
             android:text="login"
             android:textSize="20sp"></Button>
 
+        <Button
+            android:id="@+id/btn_test1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="view pager"
+            android:textSize="20sp"></Button>
+
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
