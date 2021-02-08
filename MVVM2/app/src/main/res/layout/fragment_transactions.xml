@@ -6,13 +6,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TransactionsFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_transactions_fragment"
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recycler_view_transactions_fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:padding="10dp"></androidx.recyclerview.widget.RecyclerView>-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonShowRecords"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        android:text="Show records"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:textSize="30dp"></androidx.appcompat.widget.AppCompatButton>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right|bottom"
