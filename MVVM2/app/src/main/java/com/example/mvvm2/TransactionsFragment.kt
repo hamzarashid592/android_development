@@ -14,6 +14,7 @@ import com.example.mvvm2.databinding.FragmentTransactionsBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -57,7 +58,20 @@ class TransactionsFragment : Fragment() {
 
         binding.buttonShowRecords.setOnClickListener {
             val myTransactions= transactionsDAO?.getAllTransactions()
-            Log.d("hamza",)
+
+            scope.launch {
+
+                myTransactions!!.collect {
+                    it.forEach {
+                        Log.d("hamza",it.TransactionID.toString())
+                        Log.d("hamza",it.transactionAmount.toString())
+                        Log.d("hamza",it.transactionComments.toString())
+                    }
+                }
+
+
+            }
+
         }
 
         return binding.root
