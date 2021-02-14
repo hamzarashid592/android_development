@@ -23,20 +23,9 @@ class TransactionsFragment : Fragment() {
     //    Instantiating the view model.
     private val viewModel: TransactionsViewModel by viewModels()
 
-    private var transactionsDAO : TransactionsDAO?=null
-
-    private var scope : CoroutineScope= CoroutineScope(SupervisorJob())
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val db = Room.databaseBuilder(
-            requireContext(),
-            TransactionsDatabase::class.java,
-            "TransactionsDatabase"
-        ).build()
-
-        transactionsDAO=db.transactionsDao()
 
     }
 
@@ -49,27 +38,15 @@ class TransactionsFragment : Fragment() {
 
 
         binding.fab.setOnClickListener {
-            scope.launch {
-                transactionsDAO?.insertTransaction(Transactions(null,24.5,
-                    "24/01/21", "Test Transaction"))
-            }
-            Toast.makeText(requireContext(),"Record Added Successfully",Toast.LENGTH_SHORT).show()
+//            Calling the view model insert method.
+            viewModel.insertTransaction(
+                Transactions(null,35.21,
+            "24/01/2021","Inserting from view model"))
         }
 
         binding.buttonShowRecords.setOnClickListener {
-            val myTransactions= transactionsDAO?.getAllTransactions()
-
-            scope.launch {
-
-                myTransactions!!.collect {
-                    it.forEach {
-                        Log.d("hamza",it.TransactionID.toString())
-                        Log.d("hamza",it.transactionAmount.toString())
-                        Log.d("hamza",it.transactionComments.toString())
-                    }
-                }
-
-
+            viewModel.getAllTransactions()!!.forEach {
+                Log.d("hamza","")
             }
 
         }
