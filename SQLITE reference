@@ -1,21 +1,37 @@
-create table transactions (trasactionID Integer primary key autoincrement not null, 
+CREATE TABLE Account( 
+accountID integer primary key autoincrement not null,
+accountName Text,
+accountBalance Double,
+accountNumRecords Int);
+
+
+CREATE TABLE WalletTransaction (trasactionID Integer primary key autoincrement not null, 
 transactionDate Text, 
 transactionTime Text, 
 transactionAmount double, 
 transactionType Text check (transactionType="Income" or transactionType="Expense"),
 transactionComments Text,
 accountID integer not null,
-foreign key (accountID) references accounts(accountID) on delete cascade)
-
-Insert into transactions (transactionDate, transactionTime, transactionAmount, transactionType,accountID) values ("01-Jan-2020","14:00",50.0,"Income",5)
-
-insert into accounts (accountName, accountBalance, accountNumRecords, accountColor) values ("Savings, 300.0",3,"Blue");
+foreign key (accountID) references Account(accountID) on delete cascade);
 
 
-create trigger alter_balance after insert on transactions
+Insert into WalletTransaction (transactionDate, transactionTime, transactionAmount, transactionType,accountID) values ("01-Jan-2020","14:00",50.0,"Income",1);
+Insert into WalletTransaction (transactionDate, transactionTime, transactionAmount, transactionType,accountID) values ("01-Jan-2020","14:00",50.0,"Income",1);
+Insert into WalletTransaction (transactionDate, transactionTime, transactionAmount, transactionType,accountID) values ("01-Jan-2020","14:00",50.0,"Income",2);
+Insert into WalletTransaction (transactionDate, transactionTime, transactionAmount, transactionType,accountID) values ("01-Jan-2020","14:00",50.0,"Income",2);
+Insert into WalletTransaction (transactionDate, transactionTime, transactionAmount, transactionType,accountID) values ("01-Jan-2020","14:00",50.0,"Income",3);
+Insert into WalletTransaction (transactionDate, transactionTime, transactionAmount, transactionType,accountID) values ("01-Jan-2020","14:00",50.0,"Income",3);
+Insert into WalletTransaction (transactionDate, transactionTime, transactionAmount, transactionType,accountID) values ("01-Jan-2020","14:00",50.0,"Income",4);
+Insert into WalletTransaction (transactionDate, transactionTime, transactionAmount, transactionType,accountID) values ("01-Jan-2020","14:00",50.0,"Income",4);
+
+insert into Account (accountName, accountBalance, accountNumRecords) values ("Savings", 300.0,3);
+insert into Account (accountName, accountBalance, accountNumRecords) values ("Transportation", 300.0,3);
+insert into Account (accountName, accountBalance, accountNumRecords) values ("Luxury", 300.0,3);
+insert into Account (accountName, accountBalance, accountNumRecords) values ("Charity", 300.0,3);
+
+
+create trigger alter_balance after insert on WalletTransaction
 begin
-
-update accounts set accountBalance=case when new.transactionType="Expense" then accountBalance-new.transactionAmount 
+update Account set accountBalance=case when new.transactionType="Expense" then accountBalance-new.transactionAmount 
 else accountBalance+new.transactionAmount end, accountNumRecords=accountNumRecords+1 where accountID=new.accountID;
-
 end
